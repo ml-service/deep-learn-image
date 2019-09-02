@@ -1,0 +1,29 @@
+package elasticsearchwork;
+
+public class ImageDataOp {
+	
+	private String LineId;
+    private String LineItem;
+
+    public String getLineId() {
+        return LineId;
+    }
+
+    public void setLineId(String personId) {
+        this.LineId = LineId;
+    }
+
+    public String getLineItem() {
+        return LineItem;
+    }
+
+    public void setName(String LineItem) {
+        this.LineItem = LineItem;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Line Item Id{LineId='%s', LineItem='%s'}", LineId, LineItem);
+    }
+
+}

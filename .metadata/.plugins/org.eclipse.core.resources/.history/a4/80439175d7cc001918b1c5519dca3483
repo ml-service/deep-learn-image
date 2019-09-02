@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>learnImage</groupId>
+  <artifactId>learnImage</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+	<properties>
+		<elasticsearch.version>6.1.2</elasticsearch.version>
+		<jackson.version>2.9.4</jackson.version>
+		<java.version>1.8</java.version>
+	</properties>
+  
+  <dependencies>
+       <!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
+    <dependency>
+        <groupId>org.mongodb</groupId>
+        <artifactId>mongodb-driver-sync</artifactId>
+        <version>3.11.0</version>
+    </dependency>
+    
+    <dependency>
+	    <groupId>org.elasticsearch</groupId>
+	    <artifactId>elasticsearch</artifactId>
+	    <version>${elasticsearch.version}</version>
+  	</dependency>
+ 
+  	<dependency>
+    	<groupId>org.elasticsearch.client</groupId>
+    	<artifactId>elasticsearch-rest-high-level-client</artifactId>
+    	<version>${elasticsearch.version}</version>
+  	</dependency>
+  
+	<dependency>
+		<groupId>com.google.apis</groupId>
+		<artifactId>google-api-services-vision</artifactId>
+		<version>v1-rev424-1.25.0</version>
+	</dependency>
+   </dependencies>   
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <testSourceDirectory>test</testSourceDirectory>
+    <testResources>
+      <testResource>
+        <directory>test</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </testResource>
+    </testResources>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

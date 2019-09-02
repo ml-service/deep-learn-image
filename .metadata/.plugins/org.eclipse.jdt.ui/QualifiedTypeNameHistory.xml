@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.mongodb.LazyDBObject"/>
+<fullyQualifiedTypeName name="com.learnimage.TextParse"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="org.elasticsearch.common.io.FileSystemUtils"/>
+<fullyQualifiedTypeName name="org.elasticsearch.node.Node"/>
+<fullyQualifiedTypeName name="org.elasticsearch.transport.client.PreBuiltTransportClient"/>
+<fullyQualifiedTypeName name="org.elasticsearch.client.transport.TransportClient"/>
+<fullyQualifiedTypeName name="net.sourceforge.tess4j.Tesseract"/>
+<fullyQualifiedTypeName name="net.sourceforge.tess4j.ITesseract"/>
+<fullyQualifiedTypeName name="net.sourceforge.tess4j.TesseractException"/>
+<fullyQualifiedTypeName name="com.elasticsearchwork.ImageDataItem"/>
+<fullyQualifiedTypeName name="com.elasticsearchwork.ElasticsearchClientConfiguration"/>
+</qualifiedTypeNameHistroy>

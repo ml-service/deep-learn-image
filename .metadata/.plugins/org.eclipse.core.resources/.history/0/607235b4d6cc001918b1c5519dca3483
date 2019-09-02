@@ -1,0 +1,33 @@
+package com.eswork;
+
+
+import org.elasticsearch.action.index.IndexResponse;
+import org.elasticsearch.client.transport.TransportClient;
+import org.elasticsearch.common.settings.Settings;
+import org.elasticsearch.common.transport.TransportAddress;
+import org.elasticsearch.transport.client.PreBuiltTransportClient;
+import java.io.IOException;
+
+import java.io.File;
+import java.net.InetAddress;
+import java.nio.file.Files;
+import static java.lang.System.out;
+
+
+@SuppressWarnings("deprecation")
+public class ElasticsearchClientConfiguration {
+    
+	public static void main (String[] args){
+				
+		
+		try
+		{
+		TransportClient client = new PreBuiltTransportClient(Settings.EMPTY)
+				.addTransportAddress(new TransportAddress(InetAddress.getByName("localhost"), 9300));
+		
+		}
+		catch (IOException e) {
+            e.printStackTrace();
+        }
+       }
+}

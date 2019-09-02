@@ -1,0 +1,67 @@
+package com.deeplearning;
+
+import java.io.File;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+
+import java.util.Arrays;
+import net.sourceforge.tess4j.ITesseract;
+import net.sourceforge.tess4j.Tesseract;
+import net.sourceforge.tess4j.TesseractException;
+
+import com.elasticsearchwork.ElasticsearchClientConfiguration;
+import com.elasticsearchwork.ImageDataItem;
+
+
+
+public class deeplearnimage {
+
+
+ public static void main(String[] args) {
+		 
+	//BufferedReader reader =    new BufferedReader(new InputStreamReader(System.in));
+	 	
+	try {
+		 	
+		 	//String name = reader.readLine();		
+	        //File imageFile = new File(name);        
+	        //File imageFile = new File("/C:/Users/Admin/Desktop/groc.jpg");
+	        File imageFile = new File("/C:/Users/Admin/Desktop/bill.pdf");
+	        
+	        ITesseract instance = new Tesseract();          
+	        
+	        String result = instance.doOCR(imageFile);
+	        
+	        //System.out.println(result);	        
+	                
+	        // split by new line
+	        String[] lines = result.split("\\r?\\n");
+	        for (String line : lines) {
+	        	
+	        	try
+	        	{
+	        	System.out.println(line);
+	        	ElasticsearchClientConfiguration.main(line);
+	        	}
+	        	catch (IOException e)
+	        	{
+	        		 e.getMessage();
+	        	}
+	        }
+	        
+	        
+        } 
+		//catch (IOException e)
+		//{
+        //    System.err.println(e.getMessage());
+			
+		//}
+		catch (TesseractException e) //| IOException e
+		{
+            System.err.println(e.getMessage());
+        }
+        
+ }
+}

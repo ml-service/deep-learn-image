@@ -1,0 +1,1 @@
+INDEX VERSION 1.4+D:\Harshad.Ambekar\Git\deep-learn-image\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes

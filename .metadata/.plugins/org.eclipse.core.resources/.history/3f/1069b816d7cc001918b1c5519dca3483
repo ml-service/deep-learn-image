@@ -1,0 +1,47 @@
+package com.eswork;
+
+
+import org.elasticsearch.action.index.IndexResponse;
+import org.elasticsearch.client.transport.TransportClient;
+import org.elasticsearch.common.settings.Settings;
+import org.elasticsearch.common.transport.TransportAddress;
+import org.elasticsearch.transport.client.PreBuiltTransportClient;
+import java.io.IOException;
+
+import java.io.File;
+import java.net.InetAddress;
+import java.nio.file.Files;
+import static java.lang.System.out;
+
+
+@SuppressWarnings("deprecation")
+public class ElasticsearchClientConfiguration {
+    
+	public static void main (String[] args){
+				
+		
+		//The config parameters for the connection
+		private static final String HOST = "localhost";
+		private static final int PORT_ONE = 9200;
+		private static final int PORT_TWO = 9201;
+		private static final String SCHEME = "http";
+		 
+		private static RestHighLevelClient restHighLevelClient;
+		private static ObjectMapper objectMapper = new ObjectMapper();
+		 
+		private static final String INDEX = "learnimage";
+		//private static final String TYPE = "person";
+		
+		
+		try
+		{
+		
+			client = new PreBuiltTransportClient(setting)
+                    .addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName(elasticPro.getProperty("host")), Integer.valueOf(elasticPro.getProperty("port"))));
+			
+		}
+		catch (IOException e) {
+            e.printStackTrace();
+        }
+       }
+}
